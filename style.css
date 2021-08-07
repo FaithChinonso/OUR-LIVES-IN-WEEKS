@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+body {
+    background-image: url(img/sunset.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 90%;
+    width: 80%;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.2); 
+    border: none;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0);
+    border-top: 1px solid rgb(255, 255, 255, 0.8);
+    border-radius: 15px;
+    /* backdrop-filter: blur(8px); */
+    gap: .8rem;
+    overflow: hidden;
+}
+h1, p {
+    font-style: italic;
+    text-shadow: 5px 5px 5px black;
+    padding: .2rem 1rem;
+}
+#displayResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+    border-radius: 1px;
+    background-color: rgb(24, 23, 23);
+}
+#displayResult h2 {
+    font-size: 2.5rem;
+}
+#alert1, #alert2 {
+    display: none;
+}
+#answer {
+    display: none;
+}
+#alert1.active {
+    display: block;
+}
+#alert2.active {
+    display: block;
+}
+#answer.active {
+    display: block;
+}
+.buttons {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    overflow: hidden;
+
+}
+#textBox {
+    padding: .8rem .5rem;
+    font-size: 1.2rem;
+    background-color: rgba(250, 249, 246, 0.4);
+    color: rgb(14, 13, 13);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+#textBox::placeholder {
+    color: rgb(255, 255, 255);
+}
+#textBox:focus, #calcBtn:focus, #resetBtn:focus {
+    outline: none;
+}
+button {
+    font-size: 1rem;
+    padding:.7rem 1rem;
+    width: 90%;
+    border: none;
+    transition: background-color 1s;
+   
+}
+#calcBtn {
+    background-color: rgb(255, 157, 0);
+    transition: transform 0.6s;
+   
+}
+#calcBtn:hover {
+    color: white;
+    background-color: black;
+}
+#resetBtn:hover {
+    color: white;
+    background-color: black;
+}
+button:active {
+    transform: scale(0.8);
+}
+#resetBtn {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    transition: transform 0.6s;
+}
+#refresh {
+    display: none;
+}
+@media (max-width:350px) {
+    html {
+        font-size: .8rem;
+    }
+}
+@media (max-width:700px) {
+    .container {
+        max-width: 350px;
+    }
+}
+@media (min-width:700px) {
+    html {
+        font-size: 1.2rem;
+    }
+    .container {
+        width: 50vw;
+    }
+}
+
